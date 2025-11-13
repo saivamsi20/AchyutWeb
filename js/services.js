@@ -152,6 +152,44 @@
     });
   };
 
+  // /* New: CTA interactions - simple parallax for shapes and small button ripple/pulse */
+  // const initCTAInteractions = () => {
+  //   const cta = document.querySelector('.services-cta');
+  //   if (!cta) return;
+
+  //   const shapes = Array.from(cta.querySelectorAll('.cta-shape'));
+  //   // parallax on mouse move
+  //   const onMove = (e) => {
+  //     const rect = cta.getBoundingClientRect();
+  //     const cx = rect.left + rect.width / 2;
+  //     const cy = rect.top + rect.height / 2;
+  //     const dx = (e.clientX - cx) / rect.width;
+  //     const dy = (e.clientY - cy) / rect.height;
+  //     shapes.forEach((shape, i) => {
+  //       const depth = (i + 1) * 8;
+  //       shape.style.transform = `translate3d(${dx * depth}px, ${dy * depth}px, 0)`;
+  //     });
+  //   };
+
+  //   const onLeave = () => shapes.forEach((s) => (s.style.transform = 'translate3d(0,0,0)'));
+
+  //   cta.addEventListener('mousemove', onMove);
+  //   cta.addEventListener('mouseleave', onLeave);
+  //   cta.addEventListener('touchmove', (ev) => {
+  //     if (ev.touches && ev.touches[0]) onMove(ev.touches[0]);
+  //   }, { passive: true });
+
+  //   // make "Get a Quick Quote" add a subtle pulse when focused/clicked
+  //   const quick = cta.querySelector('.quick-quote');
+  //   if (quick) {
+  //     quick.addEventListener('click', (e) => {
+  //       // small feedback animation: scale then release via CSS transform
+  //       quick.style.transform = 'scale(0.985)';
+  //       setTimeout(() => { quick.style.transform = ''; }, 220);
+  //     });
+  //   }
+  // };
+
   document.addEventListener('DOMContentLoaded', () => {
     initAOS();
     runGsapHelpers();
@@ -162,5 +200,6 @@
     initGallerySlider();
     initCardHoverFallback();
     initGsapCardHover();
+    initCTAInteractions();
   });
 })();
