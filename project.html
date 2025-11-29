@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Projects</title>
+
+    <!-- Google Font: Poppins -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="projects.css" />
+    <!-- <script src="project.js" defer></script> -->
+  </head>
+  <body>
+    <div class="page-wrapper" data-testid="projects-page-root">
+      <header class="page-header">
+        <div class="container page-header-inner">
+          <div class="page-header-text">
+            <p class="eyebrow" data-testid="projects-eyebrow">Portfolio</p>
+            <h1 class="page-title" data-testid="projects-main-title">Our Projects</h1>
+            <p class="page-subtitle" data-testid="projects-subtitle">
+              A curated selection of residential, commercial, interior, and renovation
+              projects delivered with precision, craftsmanship, and a deep respect for
+              space and detail.
+            </p>
+          </div>
+
+          <nav
+            class="project-filters"
+            aria-label="Project categories"
+            id="filterBar"
+            data-testid="project-filter-bar"
+          >
+            <!-- Filter buttons will be injected by JavaScript -->
+          </nav>
+        </div>
+      </header>
+
+      <main class="page-main">
+        <!-- Latest Projects Section -->
+        <section
+          class="latest-projects-section"
+          aria-labelledby="latest-projects-heading"
+          data-testid="latest-projects-section"
+        >
+          <div class="container">
+            <div class="section-header">
+              <div>
+                <h2 id="latest-projects-heading">Latest Projects</h2>
+                <p class="section-subtitle">
+                  Recently completed spaces that showcase our latest work in design,
+                  engineering, and execution.
+                </p>
+              </div>
+            </div>
+
+            <div class="latest-carousel" data-testid="latest-carousel">
+              <button
+                class="latest-nav latest-prev"
+                type="button"
+                id="latestPrev"
+                aria-label="Previous latest projects"
+                data-testid="latest-prev-btn"
+              >
+                &#10094;
+              </button>
+
+              <div class="latest-viewport">
+                <div
+                  class="latest-track"
+                  id="latestProjectsTrack"
+                  data-testid="latest-projects-track"
+                ></div>
+              </div>
+
+              <button
+                class="latest-nav latest-next"
+                type="button"
+                id="latestNext"
+                aria-label="Next latest projects"
+                data-testid="latest-next-btn"
+              >
+                &#10095;
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- All Projects Grid -->
+        <section
+          class="all-projects-section"
+          aria-labelledby="all-projects-heading"
+          data-testid="all-projects-section"
+        >
+          <div class="container">
+            <div class="section-header section-header--with-margin">
+              <div>
+                <h2 id="all-projects-heading">All Projects</h2>
+                <p class="section-subtitle">
+                  Explore our complete range of work across residential, commercial,
+                  interior, and renovation assignments.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="projects-grid"
+              id="projectsGrid"
+              data-testid="projects-grid"
+            ></div>
+          </div>
+        </section>
+      </main>
+<footer class="site-footer footer-style-1 achyut-bg-color-secondary">
+        <div class="footer-wrap achyut-footer-widget-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 achyut-footer-widget-col-1">
+                <aside class="widget achyut-two-column-menu">
+                  <ul>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="service-details.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="#">Service Detail</a></li>
+                    <li><a href="#">Our History</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="blog-classic.html">Blog</a></li>
+                  </ul>
+                </aside>
+              </div>
+              <div class="col-md-4 achyut-footer-widget-col-2 text-md-center">
+                <aside class="widget">
+                  <div class="textwidget">
+                    <div class="achyut-footer-logo">
+                      <img src="images/ACHYUT logo.png" alt="" />
+                    </div>
+                  </div>
+                </aside>
+              </div>
+              <div class="col-md-4 achyut-footer-widget-col-3">
+                <aside class="widget achyut-two-column-menu">
+                  <ul>
+                    <li><a href="#">Style Guide</a></li>
+                    <li><a href="#">Error 404</a></li>
+                    <li><a href="#">Instructions</a></li>
+                    <li><a href="#">Password</a></li>
+                    <li><a href="#">Licenses</a></li>
+                    <li><a href="#">Protected</a></li>
+                    <li><a href="#">Changelog</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                  </ul>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="achyut-footer-big-area-wrapper">
+          <div class="footer-wrap achyut-footer-big-area">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-4 achyut-footer-left">
+                  <span class="achyut-email-text">
+                    connect@achyutinfraprojects</span
+                  >
+                  <span class="achyut-phone-number"> +91 85558 30544</span>
+                </div>
+                <div class="col-md-4 achyut-footer-right">
+                  <span class="achyut-address"> Hyderabad <br />Telangana</span>
+                </div>
+                <div class="col-md-4 achyut-footer-right-social">
+                  <ul class="achyut-social-links">
+                    <li class="achyut-social-li achyut-social-facebook">
+                      <a title="Facebook" href="#" target="_blank">
+                        <span><i class="achyut-base-icon-facebook-f"></i></span>
+                      </a>
+                    </li>
+                    <li class="achyut-social-li achyut-social-twitter">
+                      <a title="Twitter" href="#" target="_blank">
+                        <span><i class="achyut-base-icon-twitter-2"></i></span>
+                      </a>
+                    </li>
+                    <li class="achyut-social-li achyut-social-linkedin">
+                      <a title="LinkedIn" href="#" target="_blank">
+                        <span><i class="achyut-base-icon-linkedin-in"></i></span>
+                      </a>
+                    </li>
+                    <li class="achyut-social-li achyut-social-youtube">
+                      <a title="Youtube" href="#" target="_blank">
+                        <span
+                          ><i class="achyut-base-icon-youtube-play"></i
+                        ></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="achyut-footer-text-area">
+          <div class="container">
+            <div class="achyut-footer-text-inner">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="achyut-footer-copyright-text-area">
+                    Copyright © 2025 <a href="Index.html">Achyut</a>, All
+                    Rights Reserved.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/numinate.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/circle-progress.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/gsap.js"></script>
+  <script src="js/ScrollTrigger.js"></script>
+  <script src="js/SplitText.js"></script>
+  <script src="js/magnetic.js"></script>
+  <script src="js/morphext.min.js"></script>
+  <script src="js/animated-counter.js"></script>
+  <script src="js/gsap-animation.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="project.js"></script>
+  </body>
+</html>

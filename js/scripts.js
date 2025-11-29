@@ -333,10 +333,33 @@
     })
     
   /*-------------------------------------
-    Mobile Menu
+    Mobile Menu (Updated)
   -------------------------------------*/     
-  $('.navbar-toggler,.closepanel').on('click', function () { 
-    jQuery("header").toggleClass("active");
+  function toggleMobileMenu() {
+    var $body = $('body');
+    var $toggler = $('.navbar-toggler');
+    
+    $body.toggleClass('mobile-menu-open');
+    $toggler.toggleClass('is-active');
+    
+    var isOpen = $body.hasClass('mobile-menu-open');
+    $toggler.attr('aria-expanded', isOpen);
+    
+    // Maintain compatibility with existing styles if any rely on header.active
+    $("header").toggleClass("active", isOpen);
+  }
+
+  $('.navbar-toggler, .closepanel, .achyut-mobile-menu-bg').on('click', function (e) { 
+    // Only prevent default if it's a button or link, but usually safe here
+    // e.preventDefault(); 
+    toggleMobileMenu();
+  });
+  
+  // Close menu when a link is clicked
+  $('.main-menu .navigation a').on('click', function() {
+      if ($('body').hasClass('mobile-menu-open')) {
+          toggleMobileMenu();
+      }
   }); 
 
   /*-------------------------------------
